@@ -1,0 +1,27 @@
+[project]
+name = "grid-ops-copilot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Juan", email = "jba318@uclive.ac.nz" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "networkx>=3.7",
+    "pandapower>=3.5.6",
+]
+
+[project.scripts]
+grid-ops-copilot = "grid_ops_copilot:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
